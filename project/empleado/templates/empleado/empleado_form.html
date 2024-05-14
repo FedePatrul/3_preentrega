@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Formulario empleados
+{% endblock title %}
+{% block content %}
+    <div class="container">
+        <h1 class="mb-4">Formulario de empleados</h1>
+        <form action="" method="post" class="mb-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_nombre" class="form-label">Nombre:</label>
+                {{ form.nombre }}
+            </div>
+            <div class="mb-3">
+                <label for="id_apellido" class="form-label">Apellido:</label>
+                {{ form.apellido }}
+            </div>
+            <div class="mb-3">
+                <label for="id_correo" class="form-label">Correo:</label>
+                {{ form.mail }}
+            </div>
+            <div class="mb-3">
+                <label for="id_telefono" class="form-label">Puesto de trabajo:</label>
+                {{ form.puesto_id }}
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+{% endblock content %}

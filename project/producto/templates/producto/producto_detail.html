@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Detalle de producto
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Detalle de producto</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Nombre:</strong> {{ producto.nombre }}</li>
+        <li class="list-group-item"><strong>Origen del producto:</strong> {{ producto.origen }}</li>
+        <li class="list-group-item"><strong>Precio:</strong> ${{ producto.precio }}</li>
+    </ul>    
+    <a href="{% url 'producto:list' %}" class="btn btn-primary mt-3">Volver</a>
+</div>
+{% endblock content %}

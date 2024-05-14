@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Detalle de empleado
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Detalle de empleado</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Nombre:</strong> {{ empleado.nombre }}</li>
+        <li class="list-group-item"><strong>Apellido:</strong> {{ empleado.apellido }}</li>
+        <li class="list-group-item"><strong>Correo electrónico:</strong> {{ empleado.mail }}</li>
+        <li class="list-group-item"><strong>Puesto de trabajo:</strong> {{ empleado.puesto_id }}</li>
+    </ul>    
+    <a href="{% url 'empleado:list' %}" class="btn btn-primary mt-3">Volver</a>
+</div>
+{% endblock content %}

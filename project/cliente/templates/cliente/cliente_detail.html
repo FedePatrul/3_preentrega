@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Detalle de cliente
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Detalle de cliente</h1>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Nombre:</strong> {{ cliente.nombre }}</li>
+        <li class="list-group-item"><strong>Apellido:</strong> {{ cliente.apellido }}</li>
+        <li class="list-group-item"><strong>Correo electrónico:</strong> {{ cliente.mail }}</li>
+        <li class="list-group-item"><strong>País de origen:</strong> {{ cliente.pais_origen_id }}</li>
+    </ul>    
+    <a href="{% url 'cliente:list' %}" class="btn btn-primary mt-3">Volver</a>
+</div>
+{% endblock content %}

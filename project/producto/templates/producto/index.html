@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Producto
+{% endblock title %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">App Producto</h1>
+                <div class="text-center">
+                    <a href="{% url 'producto:list' %}" class="btn btn-primary mr-2">Lista de productos</a>
+                    <a href="{% url 'producto:form' %}" class="btn btn-secondary">Formulario de productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

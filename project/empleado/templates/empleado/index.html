@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Empleado
+{% endblock title %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">App Empleado</h1>
+                <div class="text-center">
+                    <a href="{% url 'empleado:list' %}" class="btn btn-primary mr-2">Lista de empleados</a>
+                    <a href="{% url 'empleado:form' %}" class="btn btn-secondary">Formulario de empleados</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

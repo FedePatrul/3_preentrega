@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Inicio
+{% endblock title %}
+
+{% block content %}
+    
+<body>
+    
+    {% include 'core/components/page_header.html' %}
+
+    <!-- Page content-->
+    <div class="container">
+        <div class="row">
+            <!-- Blog entries-->
+            <div class="col-lg-8">
+                
+                {% include 'core/components/feature_blog_post.html' %}    
+
+                <!-- Nested row for non-featured blog posts-->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!--core/components/blog_post.html-->
+                    </div>
+                </div>
+
+                <!--core/components/pagination.html'-->
+
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                
+                <!--core/components/search_widget.html'-->
+
+                {% include 'core/components/categories_widget.html' %}
+
+                {% include 'core/components/side_widget.html' %}
+            </div>
+        </div>
+    </div>
+</body>
+
+<p>. </p>
+{% endblock content %}
