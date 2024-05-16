@@ -5,9 +5,9 @@
 {% block content %}
     <div class="container">
         {% if form.instance.pk %}
-            <h1 class="mb-4">Edición de empleado</h1>
+            <h1 class="mb-4">Edición de producto</h1>
         {% else %}
-            <h1 class="mb-4">Creación de empleado</h1>
+            <h1 class="mb-4">Creación de producto</h1>
         {% endif %}
         <form action="" method="post" class="mb-4">
             {% csrf_token %}
